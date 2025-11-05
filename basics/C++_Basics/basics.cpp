@@ -7,11 +7,11 @@ int main() {
     Personal Finance Calculator
     real cool stuff
     */
-    std::cout << "Welcome to the first program!" << std::endl;
+    std::cout << "Welcome to the first program!" << '\n';
     
     std::cout << "Enter your monthly income: ";
     double monthlyIncome{};
-    std::cin >> monthlyIncome; // also prints endl
+    std::cin >> monthlyIncome; // also prints \n
 
     // clear buffer i guess (memorise this)
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -27,7 +27,7 @@ int main() {
 
     std::cout << "\n";
     double remainingMoney{monthlyIncome - monthlyMoneySpent};
-    std::cout << "You are saving " << remainingMoney << " each month." << std::endl;
+    std::cout << "You are saving " << remainingMoney << " each month." << '\n';
 
     constexpr int monthsInYear{12}; // constexpr means known before program even runs (unlike const which means it may be found during the run)
     double annualRemainingMoney{remainingMoney * monthsInYear};
@@ -37,7 +37,7 @@ int main() {
         std::cout << "Looking rough";
     else
         std::cout << "Looking good";
-    std::cout << " with " << annualRemainingMoney << " left each year." << std::endl;
+    std::cout << " with " << annualRemainingMoney << " left each year." << '\n';
 
     // use {} for variable creation literally always unless using auto, or making a list
     // use std::size_t, never pull in std
@@ -46,7 +46,7 @@ int main() {
     for (std::size_t i{0}; i<n; ++i) {
         std::cout << i << " ";
     }
-    std::cout << std::endl;
+    std::cout << '\n';
 
     return 0; // good habit (no error, error is -1)
 }
